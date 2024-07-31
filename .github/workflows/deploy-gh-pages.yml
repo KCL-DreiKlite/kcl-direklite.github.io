@@ -13,12 +13,10 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: 8
-      - name: Print out directory list
-        run: ls
       - name: Run `pnpm install`
         run: pnpm install
       - name: Build website
-        run: vite build
+        run: pnpm build
       - name: Check Git Status
         run: git status
 #      - name: Commit built files
