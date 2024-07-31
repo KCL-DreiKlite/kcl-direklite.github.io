@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Fetch all remote branches first
+        run: git fetch --all
       - name: Show branches
         run: git branch -a
       - name: Push subtree onto `gh-pages`
