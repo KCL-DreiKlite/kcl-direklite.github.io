@@ -18,15 +18,8 @@ jobs:
       - name: Build website
         run: pnpm build
       - name: Specify dummy author
-        run: |
-          git config user.name "ignored" &&
-          git config user.email "ignored@example.com"
+        run: git config user.name "Auto Bot" && git config user.email "dummy@example.com"
       - name: Commit built files
-        run: |
-          git add -f dist/* &&
-          git commit -m "local deployment commit"
-      - name: Check Git Status
-        run: git status
-#      - name: Commit built files
-#      - name: Push subtree onto `gh-pages`
-#        run: git push origin `git subtree split --prefix dist master`:gh-pages --force
+        run: git add -f dist/* && git commit -m "local deployment commit"
+      - name: Push built files as subtree onto `gh-pages`
+        run: git push origin `git subtree split --prefix dist master`:gh-pages --force
