@@ -17,6 +17,8 @@ jobs:
         run: pnpm install
       - name: Build website
         run: pnpm build
+      - name: Commit built files
+        run: git add -f dist/* && git commit -m "local deployment commit"
       - name: Check Git Status
         run: git status
 #      - name: Commit built files
