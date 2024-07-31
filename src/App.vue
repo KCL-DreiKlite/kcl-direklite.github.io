@@ -2,8 +2,9 @@
 </script>
 
 <template>
-<div>
+<div class="flex flex-col">
   <div>Hello Github!</div>
+  <div>Goodbye Github~</div>
 </div>
 </template>
 
