@@ -9,9 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Show branches
-        run: git branch -a
       - name: Push subtree onto `gh-pages`
         run: git push origin `git subtree split --prefix dist master`:gh-pages --force
