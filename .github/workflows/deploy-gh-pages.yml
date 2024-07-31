@@ -1,0 +1,12 @@
+name: deploy-gh-pages
+run-name: Pushing subtree onto `gh-pages`
+on:
+  push:
+    branches:
+      - master
+jobs:
+  Deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: git status
