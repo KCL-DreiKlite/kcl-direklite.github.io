@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: git remote add origin https://github.com/KCL-DreiKlite/kcl-dreiklite.github.io.git
       - run: git subtree push --prefix dist origin gh-pages
-
