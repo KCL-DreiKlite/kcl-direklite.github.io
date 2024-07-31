@@ -19,11 +19,11 @@ jobs:
         run: pnpm build
       - name: Specify dummy author
         run: |
-          git config user.name "ignored" && |
+          git config user.name "ignored" &&
           git config user.email "ignored@example.com"
       - name: Commit built files
         run: |
-          git add -f dist/* && |
+          git add -f dist/* &&
           git commit -m "local deployment commit"
       - name: Check Git Status
         run: git status
