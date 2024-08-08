@@ -1,13 +1,15 @@
 <script setup lang="ts">
+import NavigationBar from "@views/NavigationBar.vue";
+
 </script>
 
 <template>
-<div class="flex flex-col">
-  <div>Hello Github!</div>
-  <div>Goodbye Github~</div>
-  <div>This is another sentence</div>
-  <div>If you can see me, you success</div>
-</div>
+  <div id="root" class="w-screen min-h-screen relative">
+    <NavigationBar />
+    <RouterView v-slot="{ Component }" class="p-1">
+      <Component :is="Component" class="w-full h-full"/>
+    </RouterView>
+  </div>
 </template>
 
 <style scoped>
