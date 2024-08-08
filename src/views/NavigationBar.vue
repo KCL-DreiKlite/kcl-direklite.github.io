@@ -32,17 +32,18 @@ const items: MenuItem[] = [
         <img src="@img/avatar/universal_avatar.png" alt="avatar from Klite Kuo" class="w-10 rounded-full m-2"/>
       </router-link>
     </template>
-    <template #item="{ item, props, hasSubmenu, root }">
+    <template #item="{ item, props, hasSubmenu }">
       <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route">
         <a v-bind="props.action" :href="href" @click="navigate">
-          <span v-if="item.icon" v-bind="props.icon"/>
+          <span v-if="item.icon" v-bind="props.icon" class="!text-2xl"/>
           <span>{{ item.label }}</span>
           <i v-if="hasSubmenu && item.submenu && item.submenu.length > 0"/>
         </a>
       </router-link>
       <a v-else :href="item.url" v-bind="props.action">
-        <span v-if="item.icon" v-bind="props.icon"/>
+        <span v-if="item.icon" v-bind="props.icon" class="!text-2xl"/>
         <span>{{ item.label }}</span>
+        <span :class="PrimeIcons.EXTERNAL_LINK"/>
       </a>
     </template>
   </Menubar>
