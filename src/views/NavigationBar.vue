@@ -2,7 +2,7 @@
 import Menubar from "primevue/menubar";
 import { MenuItem } from "primevue/menuitem";
 import 'primeicons/primeicons.css'
-import {PrimeIcons} from "@primevue/core";
+import { PrimeIcons } from "@primevue/core";
 
 const items: MenuItem[] = [
   {
@@ -26,24 +26,24 @@ const items: MenuItem[] = [
 </script>
 
 <template>
-  <Menubar id="top-menu-bar" :model="items">
+  <Menubar id="top-menu-bar" :model="items" class="h-14 !border-0" >
     <template #start>
       <router-link to="/">
         <img src="@img/avatar/universal_avatar.png" alt="avatar from Klite Kuo" class="w-10 rounded-full m-2"/>
       </router-link>
     </template>
     <template #item="{ item, props, hasSubmenu }">
-      <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route">
-        <a v-bind="props.action" :href="href" @click="navigate">
+      <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
+        <a :href="href" v-bind="props.action" @click="navigate">
           <span v-if="item.icon" v-bind="props.icon" class="!text-2xl"/>
           <span>{{ item.label }}</span>
           <i v-if="hasSubmenu && item.submenu && item.submenu.length > 0"/>
         </a>
       </router-link>
-      <a v-else :href="item.url" v-bind="props.action">
+      <a v-else :href="item.url" v-bind="props.action" target="_blank">
         <span v-if="item.icon" v-bind="props.icon" class="!text-2xl"/>
         <span>{{ item.label }}</span>
-        <span :class="PrimeIcons.EXTERNAL_LINK"/>
+        <span :class="PrimeIcons.EXTERNAL_LINK" v-bind="props.icon"/>
       </a>
     </template>
   </Menubar>
