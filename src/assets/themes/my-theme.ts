@@ -45,34 +45,34 @@ export const MyTheme = definePreset(Lara, {
                     950: '{orange.950}'
                 }
             },
-            dark: {
-                primary: {
-                    color: '{orange.700}',
-                    inverseColor: '{orange.950}',
-                    hoverColor: '{orange.900}',
-                    activeColor: '{orange.800}'
-                },
-                highlight: {
-                    background: 'rgba(250, 250, 250, .16)',
-                    focusBackground: 'rgba(250, 250, 250, .24)',
-                    color: 'rgba(255,255,255,.87)',
-                    focusColor: 'rgba(255,255,255,.87)'
-                },
-                surface: {
-                    950: '#ffffff',
-                    900: '{orange.50}',
-                    800: '{orange.100}',
-                    700: '{orange.200}',
-                    600: '{orange.300}',
-                    500: '{orange.400}',
-                    400: '{orange.500}',
-                    300: '{orange.600}',
-                    200: '{orange.700}',
-                    100: '{orange.800}',
-                    50: '{orange.900}',
-                    0: '{orange.950}'
-                }
-            }
+            // dark: {
+            //     primary: {
+            //         color: '{orange.700}',
+            //         inverseColor: '{orange.950}',
+            //         hoverColor: '{orange.900}',
+            //         activeColor: '{orange.800}'
+            //     },
+            //     highlight: {
+            //         background: 'rgba(250, 250, 250, .16)',
+            //         focusBackground: 'rgba(250, 250, 250, .24)',
+            //         color: 'rgba(255,255,255,.87)',
+            //         focusColor: 'rgba(255,255,255,.87)'
+            //     },
+            //     surface: {
+            //         950: '#ffffff',
+            //         900: '{orange.50}',
+            //         800: '{orange.100}',
+            //         700: '{orange.200}',
+            //         600: '{orange.300}',
+            //         500: '{orange.400}',
+            //         400: '{orange.500}',
+            //         300: '{orange.600}',
+            //         200: '{orange.700}',
+            //         100: '{orange.800}',
+            //         50: '{orange.900}',
+            //         0: '{orange.950}'
+            //     }
+            // }
         },
     },
     components: {
@@ -80,7 +80,7 @@ export const MyTheme = definePreset(Lara, {
             colorScheme: {
                 light: {
                     root: {
-                        background: '{surface.400}'
+                        background: 'linear-gradient(30deg, orange, mediumpurple)'
                     },
                     item: {
                         color: "white",
@@ -89,15 +89,20 @@ export const MyTheme = definePreset(Lara, {
                         },
                     }
                 },
-                dark: {
-                    root: {
-                        background: '{surface.100}'
-                    },
-                }
+                // dark: {
+                //     root: {
+                //         background: '{surface.100}'
+                //     },
+                // }
             },
             border: {
                 radius: '0'
             },
+            base: {
+                item: {
+                    padding: '0.4rem 1rem'
+                }
+            }
         },
     }
 })

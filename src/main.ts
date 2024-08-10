@@ -12,6 +12,7 @@ createApp(App)
             preset: MyTheme,
             options: {
                 prefix: 'p',
+                darkModeSelector: '',
                 cssLayer: false
             }
         }
