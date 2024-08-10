@@ -1,5 +1,7 @@
 # A Simple Blog of Klite Kuo
 
+網址：https://kcl-dreiklite.github.io/
+
 ## Introduction
 
 這是一個小小的網站，用來寫自我介紹、開發經驗等，同時也是我用來練習寫 Frontend 和 GitHub Actions 的 Side Project。
