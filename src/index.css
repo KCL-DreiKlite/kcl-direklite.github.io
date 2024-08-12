@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --navbar-height: 3.5rem;
+    --navbar-background: linear-gradient(30deg, rgb(255, 165, 0), rgb(147, 112, 219));
+    --navbar-submenu-background: linear-gradient(30deg, rgb(255, 165, 0, 50%), rgb(147, 112, 219, 50%));
+    --router-view-height: calc(100vh - var(--navbar-height));
+}

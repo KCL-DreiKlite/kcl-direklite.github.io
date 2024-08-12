@@ -26,7 +26,7 @@ const items: MenuItem[] = [
 </script>
 
 <template>
-  <Menubar id="top-menu-bar" :model="items" class="h-14 !border-0" >
+  <Menubar id="top-menu-bar" :model="items" class="Menubar-Root">
     <template #start>
       <router-link to="/">
         <img src="@img/avatar/universal_avatar.png" alt="avatar from Klite Kuo" class="w-10 rounded-full m-2"/>
@@ -51,5 +51,8 @@ const items: MenuItem[] = [
 </template>
 
 <style scoped>
-
+.Menubar-Root {
+  height: var(--navbar-height);
+  border-width: 0 !important;
+}
 </style>

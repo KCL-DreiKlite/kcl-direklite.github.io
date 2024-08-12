@@ -80,13 +80,21 @@ export const MyPreset = definePreset(Lara, {
             colorScheme: {
                 light: {
                     root: {
-                        background: 'linear-gradient(30deg, orange, mediumpurple)'
+                        background: 'var(--navbar-background)'
                     },
                     item: {
                         color: "white",
                         icon: {
                             color: 'white'
                         },
+                    },
+                    submenu: {
+                        background: 'var(--navbar-submenu-background)'
+                    },
+                    mobile: {
+                        button: {
+                            color: '{orange.700}'
+                        }
                     }
                 },
                 // dark: {
