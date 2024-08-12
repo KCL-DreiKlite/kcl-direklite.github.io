@@ -1,7 +1,7 @@
 import {definePreset} from "@primevue/themes";
 import Lara from "@primevue/themes/lara";
 
-export const MyTheme = definePreset(Lara, {
+export const MyPreset = definePreset(Lara, {
     semantic: {
         // primary: {
         //     50: '{orange.50}',
