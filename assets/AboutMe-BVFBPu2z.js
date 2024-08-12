@@ -1,0 +1,1 @@
+import{_ as s,o as t,c as o,a as e}from"./index-D_5agR3s.js";const c={},_={class:""},a=e("div",{class:"text-2xl"},"關於我",-1),n=e("div",{class:""},[e("div",null,"Klite Kuo")],-1),d=[a,n];function i(r,l){return t(),o("div",_,d)}const u=s(c,[["render",i]]);export{u as default};
