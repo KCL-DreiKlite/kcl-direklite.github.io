@@ -9,12 +9,14 @@
     }
   ],
   "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist",
     "paths": {
       "@/*": ["./src/*"],
       "@img/*": ["./src/assets/images/*"],
       "@cp/*": ["./src/components/*"],
       "@views/*": ["./src/views/*"],
-      "@assets/*": ["./src/assets/*"],
+      "@assets/*": ["./src/assets/*"]
     }
   }
 }
