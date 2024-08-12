@@ -28,22 +28,23 @@ const items: MenuItem[] = [
 <template>
   <Menubar id="top-menu-bar" :model="items" class="Menubar-Root">
     <template #start>
-      <router-link to="/">
+      <RouterLink to="/">
         <img src="@img/avatar/universal_avatar.png" alt="avatar from Klite Kuo" class="w-10 rounded-full m-2"/>
-      </router-link>
+      </RouterLink>
     </template>
     <template #item="{ item, props, hasSubmenu }">
-      <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
+      <RouterLink v-if="item.route || hasSubmenu" v-slot="{ href, navigate }" :to="item.route" custom>
         <a :href="href" v-bind="props.action" @click="navigate">
           <span v-if="item.icon" v-bind="props.icon" class="!text-2xl"/>
           <span>{{ item.label }}</span>
-          <i v-if="hasSubmenu && item.submenu && item.submenu.length > 0"/>
+          <i v-if="hasSubmenu" :class="PrimeIcons.CHEVRON_DOWN"/>
         </a>
-      </router-link>
+      </RouterLink>
       <a v-else :href="item.url" v-bind="props.action" target="_blank">
         <span v-if="item.icon" v-bind="props.icon" class="!text-2xl"/>
         <span>{{ item.label }}</span>
         <span :class="PrimeIcons.EXTERNAL_LINK" v-bind="props.icon"/>
+        <i v-if="hasSubmenu" :class="PrimeIcons.CHEVRON_DOWN"/>
       </a>
     </template>
   </Menubar>
